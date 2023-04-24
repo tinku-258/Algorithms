@@ -8,7 +8,7 @@ void preorder(TreeNode* root,vector<int>& ans){
 
 -------ITERATIVE-----------------------------------------------
   
-vector<int> preorderTraversal(TreeNode* root) {
+vector<int> preorder(TreeNode* root) {
         stack<TreeNode*> st;
         vector<int> ans;
         while(root||!st.empty()){
