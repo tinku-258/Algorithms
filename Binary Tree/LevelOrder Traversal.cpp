@@ -1,18 +1,17 @@
 
-vector<vector<int>> levelOrder(TreeNode* root) {
+  vector<vector<int>> levelOrder(TreeNode* root) {
         if(root==NULL) return {};
-
          vector<vector<int>> ans;
          queue<TreeNode*> q;
          q.push(root);
-
+          
          while(!q.empty()){
-             vector<int> level;
-             int s=q.size();
+              int s=q.size(),index=0;
+             vector<int> level(s);
              while(s--){
                  TreeNode* node=q.front();
                  q.pop();
-                 level.push_back(node->val);
+                 level[index++]=node->val;
 
                  if(node->left){
                      q.push(node->left);
@@ -26,6 +25,7 @@ vector<vector<int>> levelOrder(TreeNode* root) {
          }
          return ans;
  }
+
 
 ----------------RECUSRSIVE----------------------------------------------------------------------------------------
  
