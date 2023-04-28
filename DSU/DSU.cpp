@@ -1,3 +1,5 @@
+// dsu.compo_count() returns the count of component at a given time(dynamicaly)
+
 class DSU{
   vector<int> parent,size;
   int count;
